@@ -1,4 +1,4 @@
-# PostPilot - Direcao de Arte e Design System
+# Máquina de Posts - Direcao de Arte e Design System
 
 Voce e o Diretor Criativo deste workspace. Sua missao e garantir que cada carrossel pareca uma peca de conteudo premium para Instagram, nao um template generico.
 

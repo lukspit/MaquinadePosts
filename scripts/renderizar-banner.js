@@ -29,8 +29,8 @@ const HEIGHT = parseInt(hStr  || '400',  10);
 
 const outputDir = path.dirname(outputPath);
 fs.mkdirSync(outputDir, { recursive: true });
-const userDataDir = path.join(os.tmpdir(), 'postpilot-puppeteer-profile');
-const browserHome = path.join(os.tmpdir(), 'postpilot-browser-home');
+const userDataDir = path.join(os.tmpdir(), 'maquina-de-posts-puppeteer-profile');
+const browserHome = path.join(os.tmpdir(), 'maquina-de-posts-browser-home');
 
 function carregarFotoPerfil() {
   const raiz = path.join(__dirname, '..');

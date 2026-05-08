@@ -34,8 +34,8 @@ if (!fs.existsSync(htmlPath)) {
 // Cria o diretório de saída se não existir
 const outputDir = path.dirname(outputPath);
 fs.mkdirSync(outputDir, { recursive: true });
-const userDataDir = path.join(os.tmpdir(), 'postpilot-puppeteer-profile');
-const browserHome = path.join(os.tmpdir(), 'postpilot-browser-home');
+const userDataDir = path.join(os.tmpdir(), 'maquina-de-posts-puppeteer-profile');
+const browserHome = path.join(os.tmpdir(), 'maquina-de-posts-browser-home');
 
 // Procura a foto de perfil em marca/ (aceita .jpg, .jpeg ou .png)
 function carregarFotoPerfil() {

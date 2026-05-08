@@ -1,4 +1,4 @@
-# PostPilot — Manifesto e Manual de Operacao
+# Máquina de Posts — Manifesto e Manual de Operacao
 
 Leia este arquivo no inicio de cada sessao. Ele define a visao do produto, a metodologia de criacao e os limites do agente.
 
@@ -6,7 +6,7 @@ Leia este arquivo no inicio de cada sessao. Ele define a visao do produto, a met
 
 ## 1. Visao
 
-O PostPilot e um sistema automatico de conteudo visual para Instagram. A promessa nao e "gerar slides"; e transformar uma ideia solta em uma peca pronta para publicar, com narrativa, direcao de arte, imagens e identidade de marca.
+A Máquina de Posts e um sistema automatico de conteudo visual para Instagram. A promessa nao e "gerar slides"; e transformar uma ideia solta em uma peca pronta para publicar, com narrativa, direcao de arte, imagens e identidade de marca.
 
 - **Objetivo:** parar o scroll, sustentar a atencao e levar a uma acao clara.
 - **Padrao:** autoridade visual, limpeza, ritmo e especificidade.

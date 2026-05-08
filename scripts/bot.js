@@ -329,7 +329,7 @@ async function iniciarBot() {
     process.exit(1);
   }
 
-  console.log('Bot do PostPilot iniciado. Aguardando mensagens...');
+  console.log('Bot da Máquina de Posts iniciado. Aguardando mensagens...');
   console.log(`Projeto: ${ROOT}`);
   console.log(`Chat autorizado: ${chatAutorizado}`);
   console.log(`Autoaprovacao do agente: ${valorAtivo(env.TELEGRAM_BOT_AUTO_APPROVE) ? 'ativa' : 'inativa'}\n`);

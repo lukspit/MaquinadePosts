@@ -1,4 +1,4 @@
-# PostPilot
+# Máquina de Posts
 
 Sistema automatico de conteudo visual para Instagram. Voce manda uma ideia, tema, link ou transcricao; o agente cria a narrativa, aplica sua marca, gera imagens quando configurado e entrega PNGs prontos para postar.
 
@@ -63,7 +63,7 @@ Depois, peca:
 ## Estrutura
 
 ```text
-postpilot/
+maquina-de-posts/
 ├── CLAUDE.md
 ├── AGENTS.md
 ├── .claude/commands/
