@@ -69,4 +69,4 @@ Mostre ao usuário o que foi alterado:
 
 ## Nota
 
-A pesquisa do Instagram (`pesquisa/instagram-framework.md`) **não é atualizada** neste comando — ela é independente da marca. Se quiser atualizar a pesquisa, delete o arquivo e use `/chef` (vai refazer apenas a fase de pesquisa).
+A pesquisa do Instagram (`pesquisa/instagram-framework.md`) **não é atualizada** neste comando — ela é independente da marca. Se quiser atualizar a pesquisa, delete o arquivo e use `/começar` (vai refazer apenas a fase de pesquisa).

@@ -161,7 +161,7 @@ async function main() {
   if (arg === '--teste') {
     console.log('Enviando mensagem de teste...');
     try {
-      await enviarMensagem(token, chatId, 'Carousel Engine conectado. Tudo funcionando.');
+      await enviarMensagem(token, chatId, 'PostPilot conectado. Tudo funcionando.');
       console.log('Teste bem-sucedido. Telegram configurado corretamente.');
     } catch (err) {
       console.error('Erro no teste:', err.message);

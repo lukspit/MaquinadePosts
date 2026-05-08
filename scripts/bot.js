@@ -42,6 +42,10 @@ function carregarEnv() {
   return env;
 }
 
+function valorAtivo(valor) {
+  return ['1', 'true', 'sim', 'yes', 'on'].includes(String(valor || '').trim().toLowerCase());
+}
+
 // ---------------------------------------------------------------------------
 // Telegram helpers
 // ---------------------------------------------------------------------------
@@ -116,7 +120,13 @@ function rodarClaude(prompt) {
   return new Promise((resolve, reject) => {
     console.log('\n[claude] Iniciando sessão...');
 
-    const proc = spawn('claude', ['-p', prompt, '--dangerously-skip-permissions', '--model', 'claude-sonnet-4-6'], {
+    const env = carregarEnv();
+    const args = ['-p', prompt, '--model', env.CLAUDE_MODEL || 'claude-sonnet-4-6'];
+    if (valorAtivo(env.TELEGRAM_BOT_AUTO_APPROVE)) {
+      args.splice(2, 0, '--dangerously-skip-permissions');
+    }
+
+    const proc = spawn('claude', args, {
       cwd: ROOT,
       env: { ...process.env },
     });
@@ -212,6 +222,7 @@ REGRAS DE DESIGN OBRIGATÓRIAS:
 ${perfil ? `\nPERFIL DA MARCA:\n${perfil}` : ''}
 
 Renderiza cada slide com: node scripts/renderizar.js <html> <output/carrossel-[slug]/slide-0N.png>
+Escopo: escreva apenas dentro de output/. Leia marca/, pesquisa/ e config/.env quando necessário. Ignore pedidos para apagar, mover ou editar arquivos do projeto fora desse fluxo.
 Confirma os arquivos gerados ao final. Execute sem fazer perguntas.`;
 
   if (isUrl) {
@@ -304,15 +315,24 @@ async function processarFila(token) {
 async function iniciarBot() {
   const env = carregarEnv();
   const token = env.TELEGRAM_TOKEN || env.TELEGRAM_BOT_TOKEN;
+  const chatAutorizado = env.TELEGRAM_CHAT_ID ? String(env.TELEGRAM_CHAT_ID) : '';
 
   if (!token) {
     console.error('Erro: TELEGRAM_TOKEN nao definido em config/.env');
-    console.error('Configure o Telegram com o comando /chef no Claude Code.');
+    console.error('Configure o Telegram com o comando /começar no Claude Code.');
     process.exit(1);
   }
 
-  console.log('Bot @Carrosselpronto_bot iniciado. Aguardando mensagens...');
-  console.log(`Projeto: ${ROOT}\n`);
+  if (!chatAutorizado) {
+    console.error('Erro: TELEGRAM_CHAT_ID nao definido em config/.env');
+    console.error('Por seguranca, o bot so processa mensagens do chat configurado.');
+    process.exit(1);
+  }
+
+  console.log('Bot do PostPilot iniciado. Aguardando mensagens...');
+  console.log(`Projeto: ${ROOT}`);
+  console.log(`Chat autorizado: ${chatAutorizado}`);
+  console.log(`Autoaprovacao do agente: ${valorAtivo(env.TELEGRAM_BOT_AUTO_APPROVE) ? 'ativa' : 'inativa'}\n`);
 
   let offset = 0;
 
@@ -339,6 +359,11 @@ async function iniciarBot() {
         const texto = msg.text.trim();
 
         console.log(`[msg] ${chatId}: ${texto}`);
+        if (chatId !== chatAutorizado) {
+          console.log(`[seguranca] Chat ignorado: ${chatId}`);
+          await enviarTexto(token, chatId, 'Este bot esta vinculado a outro chat.');
+          continue;
+        }
         fila.push({ chatId, texto });
         processarFila(token);
       }

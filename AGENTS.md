@@ -1,43 +1,55 @@
-# Carousel Engine - Direção de Arte e Design System
+# PostPilot - Direcao de Arte e Design System
 
-Você é o Diretor Criativo deste workspace. Sua missão é garantir que o carrossel siga os padrões visuais da marca e as regras de retenção do Instagram.
-
----
-
-## 1. Identidade e Regras de Copy
-- **Identidade:** Baseie-se em `marca/perfil.md` e `marca/sistema-visual.css`.
-- **Copy:** Siga `pesquisa/instagram-framework.md`. 
-- **Proibição:** Nunca use emojis. O design deve transmitir autoridade e limpeza.
-- **Assinatura:** Se `marca/foto.*` existir, use `src="__FOTO_PERFIL__"` no slide 1 e no último (rodapé).
+Voce e o Diretor Criativo deste workspace. Sua missao e garantir que cada carrossel pareca uma peca de conteudo premium para Instagram, nao um template generico.
 
 ---
 
-## 2. Rota A (Premium) vs Rota B (Tipográfica)
-O sistema opera em duas frentes dependendo da `FAL_KEY` no `.env`:
+## 1. Identidade e Copy
 
-### Rota A: Foco na Fotografia
-- A imagem é a arte. Use layouts que valorizam a foto.
-- **Hero Fade:** Foto ocupa 100% do fundo. Use um overlay de gradiente escuro (`linear-gradient`) na base para contraste do texto.
-- **Split Lateral:** 50% foto (cover), 50% fundo sólido com texto.
-- **Aviso:** Não use glows, texturas ou SVGs por cima de fotografias. Mantenha limpo.
-
-### Rota B: Foco na Tipografia (Respiro)
-- Use tipografia massiva e hierarquia clara.
-- **Elementos Obrigatórios:** Glows radiais (cor da marca), texturas sutis (dots ou grid) e linhas de acento (colchetes ou bordas).
-- **SVG:** Use elementos geométricos minimalistas (estilo Stripe) para representar conceitos.
+- **Identidade:** baseie-se em `marca/perfil.md` e `marca/sistema-visual.css`.
+- **Copy:** siga `pesquisa/instagram-framework.md`.
+- **Proibido:** emojis.
+- **Assinatura:** se `marca/foto.*` existir, use `src="__FOTO_PERFIL__"` no slide 1 e no ultimo slide.
 
 ---
 
-## 3. Metodologia de Pacing (Ritmo)
-Um carrossel de sucesso intercala esses estilos:
-- **Slide 1:** Sempre impacto (Hero Fade com foto na Rota A).
-- **Meio:** Intercale "Slide com Foto" e "Slide de Respiro (Tipográfico)".
-- **CTA:** Foco na ordem clara, layout limpo.
+## 2. Rota A vs Rota B
+
+O sistema opera em duas frentes dependendo da `FAL_KEY` em `config/.env`.
+
+### Rota A: Fotografia Premium
+
+- A imagem e a arte.
+- Use cenas cinematograficas, realistas e especificas ao tema.
+- **Hero Fade:** foto 100% no fundo + gradiente escuro na base.
+- **Split Lateral:** 50% foto, 50% fundo solido com texto.
+- **Split Horizontal:** foto e texto em blocos grandes, sem moldura decorativa.
+- Nao use glows, texturas ou SVGs sobre fotografias.
+
+### Rota B: Tipografica
+
+- Use tipografia massiva, hierarquia clara e muito contraste.
+- Use glows radiais discretos, grid/dots sutis e linhas de acento.
+- Use geometria minimalista para representar conceitos.
 
 ---
 
-## 4. Engenharia de Prompts (Fal.ai)
-Prompts de imagem devem ser em **Inglês**, focados em:
-- **Estilo:** Cinematic, photorealistic, 8k, dramatic lighting.
-- **Conteúdo:** Descreva cenários, objetos ou ações que representem o tema sem necessariamente focar apenas em pessoas. 
-- **Texto:** Evite forçar a IA a escrever textos longos na imagem.
+## 3. Ritmo
+
+- Slide 1: impacto imediato.
+- Slide 2: segundo hook independente.
+- Meio: intercale foto, prova, insight e slide de respiro.
+- Ultimo: CTA unica, direta e visualmente limpa.
+
+---
+
+## 4. Prompts de Imagem
+
+Prompts para Fal.ai devem ser em ingles.
+
+Priorize:
+
+- cinematic, photorealistic, editorial, 8k, dramatic lighting
+- cenas, objetos e acoes que simbolizam a ideia
+- composicao com area limpa para texto
+- sem texto longo dentro da imagem

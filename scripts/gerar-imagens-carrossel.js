@@ -47,10 +47,11 @@ async function gerarImagemFal(prompt, caminhoSaida) {
     return gerarImagemPollinations(prompt, caminhoSaida);
   }
 
-  console.log(`🌟 Gerando imagem PREMIUM via Fal.ai para: ${path.basename(caminhoSaida)}...`);
+  const model = process.env.FAL_MODEL || 'fal-ai/flux-2/klein/9b';
+  console.log(`🌟 Gerando imagem PREMIUM via Fal.ai (${model}) para: ${path.basename(caminhoSaida)}...`);
 
   try {
-    const url = 'https://fal.run/fal-ai/flux/schnell';
+    const url = `https://fal.run/${model}`;
     
     const response = await fetch(url, {
       method: 'POST',
@@ -59,12 +60,15 @@ async function gerarImagemFal(prompt, caminhoSaida) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        prompt: prompt,
-        width: 1080,
-        height: 1350,
+        prompt,
+        image_size: {
+          width: 1080,
+          height: 1350
+        },
         num_inference_steps: 4,
         num_images: 1,
-        enable_safety_checker: false
+        enable_safety_checker: true,
+        output_format: 'png'
       })
     });
 
@@ -76,7 +80,10 @@ async function gerarImagemFal(prompt, caminhoSaida) {
     }
 
     const data = await response.json();
-    const imageUrl = data.images[0].url;
+    const imageUrl = data.images && data.images[0] && data.images[0].url;
+    if (!imageUrl) {
+      throw new Error('Resposta da Fal.ai sem URL de imagem.');
+    }
     await baixarImagem(imageUrl, caminhoSaida);
     console.log(`✅ Imagem PREMIUM salva: ${caminhoSaida}`);
     

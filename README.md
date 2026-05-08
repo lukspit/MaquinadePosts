@@ -1,55 +1,51 @@
-# Carousel Engine
+# PostPilot
 
-Gera carrosséis profissionais para o Instagram com a sua identidade visual — direto no Claude Code, sem ferramentas de design, sem assinatura de software.
-
-Você conversa, o sistema gera os slides em PNG prontos para postar. Se quiser, entrega automático no Telegram.
+Sistema automatico de conteudo visual para Instagram. Voce manda uma ideia, tema, link ou transcricao; o agente cria a narrativa, aplica sua marca, gera imagens quando configurado e entrega PNGs prontos para postar.
 
 ---
 
-## O que você recebe
+## O que vem no projeto
 
-- Sistema completo de geração de carrosséis dentro do Claude Code
-- Framework de copy baseado em pesquisa real de carrosséis de alto engajamento no Instagram
-- Identidade visual da sua marca aplicada automaticamente em cada carrossel
-- Layouts dinâmicos com imagens ultra-realistas de inteligência artificial (motor FLUX.2 integrado)
-- Slides renderizados em PNG 1080x1350 (formato nativo 4:5 do Instagram)
-- Entrega opcional direto no Telegram
-
----
-
-## Pré-requisitos
-
-- [Claude Code](https://claude.ai/code) instalado (extensão do VS Code ou app)
-- Assinatura ativa da Anthropic (plano Pro ou acima)
-- [Node.js](https://nodejs.org) instalado (versão 18 ou superior)
-- *(Recomendado)* Conta na [Fal.ai](https://fal.ai) com créditos para geração das imagens de fundo (custa menos de um centavo por imagem). Caso não tenha, o sistema usa um fallback gratuito.
+- Onboarding de marca dentro do Claude Code
+- Framework de retencao para carrosseis do Instagram
+- Imagens premium via Fal.ai com `fal-ai/flux-2/klein/9b`
+- Renderizacao em PNG 1080x1350
+- Entrega opcional pelo Telegram
+- Bot opcional para pedir conteudo direto pelo Telegram
 
 ---
 
-## Como começar
+## Pre-requisitos
 
-**1.** Clone o repositório e entre na pasta criada
+- Claude Code instalado
+- Assinatura ativa da Anthropic
+- Node.js 18+
+- Opcional: conta na Fal.ai com creditos
+- Opcional: bot do Telegram
+
+---
+
+## Como comecar
 
 ```bash
 git clone https://github.com/lukspit/CarrosseisAutom-ticos.git
 cd CarrosseisAutom-ticos
-```
-
-**2.** Abra essa pasta no VS Code
-
-```bash
 code .
 ```
 
-Ou arraste a pasta `CarrosseisAutom-ticos` para dentro do VS Code.
+No Claude Code, rode:
 
-> Importante: abra a pasta `CarrosseisAutom-ticos` — não a pasta onde você rodou o clone.
+```text
+/começar
+```
 
-**3.** Digite `/chef` no Claude Code e siga as instruções
+O setup configura dependencias, marca, sistema visual, Fal.ai e Telegram quando desejado.
 
-O setup leva cerca de 10 minutos na primeira vez — o sistema instala as dependências, pesquisa padrões reais do Instagram, configura a identidade da sua marca, e já gera o primeiro carrossel de teste.
+Depois, peca:
 
-Depois do setup, é só pedir: *"cria um carrossel sobre produtividade"* — e receber os slides prontos.
+```text
+/carrossel como criar conteudo todos os dias sem travar
+```
 
 ---
 
@@ -57,40 +53,54 @@ Depois do setup, é só pedir: *"cria um carrossel sobre produtividade"* — e r
 
 | Comando | O que faz |
 |---|---|
-| `/chef` | Setup inicial ou retomada. Use sempre que abrir em uma nova máquina. |
-| `/carrossel [tema]` | Gera um carrossel. Ex: `/carrossel marketing digital` |
-| `/marca` | Atualiza cores, fonte, tom de voz ou nicho da sua marca |
+| `/começar` | Setup inicial, retomada e configuracao da marca |
+| `/carrossel [tema]` | Gera um carrossel completo |
+| `/marca` | Atualiza identidade, tom, nicho ou CTA |
 | `/entregar` | Envia o carrossel mais recente para o Telegram |
 
 ---
 
-## Estrutura do projeto
+## Estrutura
 
-```
-carousel-engine/
-├── CLAUDE.md                    ← Instruções do sistema (lidas automaticamente)
-├── .claude/commands/            ← Comandos /chef, /carrossel, /marca, /entregar
+```text
+postpilot/
+├── CLAUDE.md
+├── AGENTS.md
+├── .claude/commands/
 ├── scripts/
-│   ├── renderizar.js            ← Converte HTML em PNG via Puppeteer
-│   └── entregar.js              ← Envia slides para o Telegram
-├── marca/                       ← Perfil e tokens visuais da sua marca (preenchidos no setup)
-├── pesquisa/                    ← Framework de carrosséis baseado em pesquisa real do Instagram
-├── output/                      ← Slides gerados em PNG
-└── config/.env.example          ← Modelo de credenciais do Telegram
+├── marca/
+├── pesquisa/
+├── output/
+└── config/.env.example
 ```
 
 ---
 
-## Perguntas frequentes
+## Imagens IA
 
-**Precisa saber programar?**
-Não. Tudo é feito conversando com o Claude. O único comando que você digita é `/chef` na primeira vez.
+Por padrao, o projeto usa:
 
-**Funciona no Windows?**
-Sim. O sistema detecta automaticamente o sistema operacional e instala o Puppeteer da forma correta para cada plataforma (Mac Intel, Mac Apple Silicon, Windows, Linux).
+```env
+FAL_MODEL=fal-ai/flux-2/klein/9b
+```
 
-**O Telegram é obrigatório?**
-Não. Se preferir, os slides ficam salvos na pasta `output/` do projeto. O Telegram é recomendado porque facilita muito o fluxo — o carrossel chega no celular assim que fica pronto.
+Se `FAL_KEY` estiver vazio, o carrossel segue a rota tipografica ou usa fallback gratuito quando o script de imagem for acionado.
 
-**Quantos slides por carrossel?**
-Entre 5 e 10, dependendo do tema. O sistema decide com base no conteúdo e nos padrões de engajamento pesquisados.
+---
+
+## Telegram
+
+O envio simples usa:
+
+```env
+TELEGRAM_TOKEN=
+TELEGRAM_CHAT_ID=
+```
+
+O bot automatico tambem existe. Ele processa apenas mensagens do `TELEGRAM_CHAT_ID` configurado.
+
+```env
+TELEGRAM_BOT_AUTO_APPROVE=true
+```
+
+Use esse modo apenas em uma maquina e repositório de confianca.

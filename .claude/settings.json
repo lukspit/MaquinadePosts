@@ -5,11 +5,12 @@
       "Bash(npm init*)",
       "Bash(node scripts/renderizar.js*)",
       "Bash(node scripts/entregar.js*)",
+      "Bash(node scripts/gerar-imagens-carrossel.js*)",
+      "Bash(node scripts/bot.js*)",
       "Bash(npx puppeteer*)",
       "Bash(ls*)",
       "Bash(mkdir*)",
-      "Bash(node -e*)",
-      "Bash(cat config/.env*)"
+      "Bash(node -e*)"
     ]
   }
 }

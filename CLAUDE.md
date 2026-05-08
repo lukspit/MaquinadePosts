@@ -1,58 +1,95 @@
-# Carousel Engine — Manifesto e Manual de Operação
+# PostPilot — Manifesto e Manual de Operacao
 
-Sempre leia este arquivo completo no início de qualquer sessão. Ele contém a inteligência, a filosofia e os protocolos de execução do sistema.
-
----
-
-## 1. Filosofia e Inteligência
-O Carousel Engine é uma ferramenta de **autoridade visual**. 
-- **Objetivo:** Parar o scroll e reter atenção.
-- **Biblioteca de Skills:** Sempre consulte a pasta `skills/` (`copywriting-premium.md` e `retencao-extrema.md`) para elevar o nível da narrativa e garantir o máximo de engajamento.
-- **Autoridade:** Design limpo e premium. **Zero emojis.**
-- **Assinatura (Branding):** Se houver `marca/foto.*`, ela deve estar presente no **Slide 1** e no **último slide**. 
+Leia este arquivo no inicio de cada sessao. Ele define a visao do produto, a metodologia de criacao e os limites do agente.
 
 ---
 
-## 2. A Identidade: O Diretor de Arte
-Você é o **Diretor de Arte**. Sua missão é a simetria e o equilíbrio.
-- **Espaçamento:** Nunca cole texto nas bordas. No Slide 1 (Hero Fade), o texto deve flutuar um pouco acima do rodapé para dar respiro e simetria (ex: `padding-bottom: 150px`).
-- **Simplicidade:** Evite elementos aleatórios como números soltos nos cantos ("01", "02").
+## 1. Visao
+
+O PostPilot e um sistema automatico de conteudo visual para Instagram. A promessa nao e "gerar slides"; e transformar uma ideia solta em uma peca pronta para publicar, com narrativa, direcao de arte, imagens e identidade de marca.
+
+- **Objetivo:** parar o scroll, sustentar a atencao e levar a uma acao clara.
+- **Padrao:** autoridade visual, limpeza, ritmo e especificidade.
+- **Proibido:** emojis, visual poluido, texto pequeno, CTA generica e slides que parecem posts separados.
+- **Assinatura:** se existir `marca/foto.*`, use `src="__FOTO_PERFIL__"` no slide 1 e no ultimo slide.
 
 ---
 
-## 3. Metodologia de Produção: Rota A vs Rota B
-O sistema detecta a rota pela `FAL_KEY` no `config/.env`:
+## 2. Fontes de Inteligencia
 
-### Rota A: Experiência Visual Premium (IA de Imagens)
-A imagem é a alma do slide. Intercale os modelos para criar um **ritmo visual dinâmico**:
-- **Hero Fade:** Foto 100% background + overlay dark gradient no bottom.
-- **Split Lateral (50/50):** Foto de um lado, bloco de cor sólida do outro.
-- **Split Horizontal (50/50):** Foto em cima (ou embaixo), texto no bloco oposto.
-*Regra:* Varie a composição a cada slide com imagem.
+Antes de criar, leia:
 
-### Rota B: Experiência Tipográfica (Design Geométrico)
-- **Elementos:** Tipografia massiva, Glows radiais, texturas CSS e linhas de acento.
+1. `marca/perfil.md`
+2. `marca/sistema-visual.css`
+3. `pesquisa/instagram-framework.md`
+4. `AGENTS.md`
+
+Use esses arquivos como contexto e criterio de decisao. Nao transforme diretrizes em formulas rigidas.
 
 ---
 
-## 4. Tipografia e Escala (Padrão Premium)
-- **Headline (Slide 1):** 110–140px, weight 800.
-- **Títulos (Meio):** 80–100px, weight 700.
-- **Eyebrows (Prezinhos/Labels):** 28–34px, uppercase.
+## 3. Metodologia
+
+Todo carrossel precisa nascer de uma tese. Antes de desenhar, defina:
+
+- **Publico:** para quem isso existe.
+- **Tensao:** qual dor, desejo, erro ou contradicao abre o loop.
+- **Promessa:** o que a pessoa ganha se deslizar ate o final.
+- **Arco:** como cada slide ganha o proximo.
+- **CTA:** qual acao unica fecha naturalmente a narrativa.
+
+O agente deve decidir a quantidade de slides com base no conteudo. O padrao e 6 a 9 slides.
 
 ---
 
-## 5. O Fluxo de Trabalho (Sequência de Produção)
-1. **Entendimento:** Ler `.env`, `perfil.md`, `sistema-visual.css` e `instagram-framework.md`.
-2. **Planejamento:** Definir o arco narrativo (usando as `skills/`) e o pacing. **Mostre o plano ao usuário.**
-3. **Produção de Ativos:** Gerar `prompts.json` e rodar `node scripts/gerar-imagens-carrossel.js`.
-4. **Verificação:** Dar `ls` na pasta de imagens para confirmar o recebimento.
-5. **Codificação e Render:** Gerar HTMLs e renderizar via `renderizar.js`.
+## 4. Rotas Visuais
+
+A rota e definida pela presenca de `FAL_KEY` em `config/.env`.
+
+### Rota A: Imagem Premium
+
+Use quando `FAL_KEY` tiver valor. O modelo padrao e `fal-ai/flux-2/klein/9b`.
+
+- A imagem e a arte principal, nao decoracao.
+- Use fotografia cinematica ou cenas conceituais realistas.
+- Varie composicoes: Hero Fade, Split Lateral, Split Horizontal e Detalhe Editorial.
+- Texto sobre foto sempre precisa de overlay escuro ou bloco solido.
+- Nao coloque glow, textura ou SVG por cima de foto.
+
+### Rota B: Tipografica
+
+Use quando `FAL_KEY` estiver vazio ou quando o conteudo pedir respiro.
+
+- Tipografia grande, contraste forte e hierarquia simples.
+- Use textura sutil, grid, dots, linhas e acentos geometricos.
+- Use formas minimalistas para representar conceitos, sem ilustrações complexas.
 
 ---
 
-## 6. Stack Técnico e Comandos
-- `/chef`: Setup.
-- `/carrossel [tema]`: Geração principal.
-- `scripts/gerar-imagens-carrossel.js`: Fal.ai.
-- `scripts/renderizar.js`: Puppeteer.
+## 5. Pacing
+
+Um bom carrossel alterna densidade e respiro.
+
+- Slide 1: impacto imediato.
+- Slide 2: segundo hook independente.
+- Meio: alternar prova, insight, exemplo e respiro visual.
+- Penultimo: consolidar a virada ou o maior aprendizado.
+- Ultimo: CTA unica, limpa e facil de executar.
+
+---
+
+## 6. Producao
+
+1. Leia contexto de marca e pesquisa.
+2. Planeje tese, arco, pacing e rota visual.
+3. Se usar imagens, gere `prompts.json` e rode `scripts/gerar-imagens-carrossel.js`.
+4. Crie HTMLs em `output/carrossel-[slug]/`.
+5. Renderize com `scripts/renderizar.js`.
+6. Verifique se os PNGs existem, estao legiveis e seguem 1080x1350.
+
+Comandos principais:
+
+- `/começar`: setup e onboarding.
+- `/carrossel [tema]`: gera carrossel.
+- `/marca`: atualiza identidade.
+- `/entregar`: envia PNGs pelo Telegram.

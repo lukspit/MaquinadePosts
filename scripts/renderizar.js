@@ -14,6 +14,8 @@
 
 const fs = require('fs');
 const path = require('path');
+const os = require('os');
+const { pathToFileURL } = require('url');
 
 // Verifica argumentos
 const [,, htmlPath, outputPath] = process.argv;
@@ -32,6 +34,8 @@ if (!fs.existsSync(htmlPath)) {
 // Cria o diretório de saída se não existir
 const outputDir = path.dirname(outputPath);
 fs.mkdirSync(outputDir, { recursive: true });
+const userDataDir = path.join(os.tmpdir(), 'postpilot-puppeteer-profile');
+const browserHome = path.join(os.tmpdir(), 'postpilot-browser-home');
 
 // Procura a foto de perfil em marca/ (aceita .jpg, .jpeg ou .png)
 function carregarFotoPerfil() {
@@ -79,7 +83,9 @@ async function renderizar() {
 
   const browser = await puppeteer.launch({
     headless: 'new',
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    userDataDir,
+    env: { ...process.env, HOME: browserHome, XDG_CONFIG_HOME: browserHome },
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-crash-reporter', '--disable-crashpad', '--disable-features=Crashpad'],
   });
 
   try {
@@ -92,16 +98,13 @@ async function renderizar() {
       deviceScaleFactor: 1,
     });
 
-    // Lê o HTML e injeta a foto de perfil (base64)
+    // Lê o HTML e injeta a foto de perfil somente em memória.
     const htmlBruto = fs.readFileSync(htmlPath, 'utf-8');
     const html = injetarFoto(htmlBruto);
-    
-    // Sobrescreve o arquivo com a versão injetada temporariamente
-    fs.writeFileSync(htmlPath, html);
 
-    // Carrega o arquivo local via protocolo file:// para que caminhos relativos de imagens funcionem
-    const fileUrl = 'file://' + path.resolve(htmlPath);
-    await page.goto(fileUrl, { waitUntil: 'networkidle0' });
+    const baseUrl = pathToFileURL(path.dirname(path.resolve(htmlPath)) + path.sep).href;
+    const htmlComBase = html.replace(/<head([^>]*)>/i, `<head$1><base href="${baseUrl}">`);
+    await page.setContent(htmlComBase, { waitUntil: 'networkidle0' });
 
     // Aguarda carregamento de fontes
     await page.evaluateHandle('document.fonts.ready');

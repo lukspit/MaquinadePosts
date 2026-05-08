@@ -13,7 +13,7 @@ Execute `ls config/.env 2>/dev/null`.
 Se não existir:
 > "O Telegram ainda não está configurado. Quer configurar agora? É simples — você vai receber os carrosséis direto no celular. Leva uns 3 minutos."
 
-Se o usuário quiser configurar, siga o fluxo de configuração do Telegram descrito no `/chef` (Fase 5).
+Se o usuário quiser configurar, siga o fluxo de configuração do Telegram descrito no `/começar`.
 
 Se o usuário não quiser:
 > "Ok. Os carrosséis ficam na pasta `output/`. Quando quiser configurar, é só chamar `/entregar` novamente."

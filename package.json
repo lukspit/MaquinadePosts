@@ -1,7 +1,7 @@
 {
-  "name": "carousel-engine",
+  "name": "postpilot",
   "version": "1.0.0",
-  "description": "Gerador de carrosséis profissionais para Instagram — powered by Claude Code",
+  "description": "Sistema automático de conteúdo visual para Instagram — powered by Claude Code",
   "private": true,
   "scripts": {
     "render": "node scripts/renderizar.js",

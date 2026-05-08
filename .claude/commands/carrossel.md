@@ -1,45 +1,87 @@
-# /carrossel — Linha de Produção Automática
+# /carrossel — Criar Conteudo para Instagram
 
-Este comando segue uma sequência lógica de dependências. Você está PROIBIDO de avançar para uma fase sem concluir a anterior e verificar os arquivos no disco.
+Use este comando para transformar um tema, ideia, link ou transcricao em um carrossel pronto para postar.
 
----
+## Objetivo
 
-## FASE 1: Setup de Rota (Obrigatório)
-1. Use `view_file` para ler `config/.env`.
-   - Se `FAL_KEY` tiver valor: **ROTA A (Premium)**.
-   - Se estiver vazio: **ROTA B (Tipográfica)**.
-2. Leia `AGENTS.md`, `marca/perfil.md` e `pesquisa/instagram-framework.md`.
+Criar uma peca com narrativa forte, direcao de arte coerente, imagens quando fizer sentido e PNGs finais em `output/`.
 
 ---
 
-## FASE 2: Planejamento e Copy (Aprovação 1)
-1. **Esqueleto Visual:** Defina quantos slides e quais terão fotos (Ex: 1, 3, 5 com imagem, outros respiro).
-2. **Prompts e Copy:** Escreva a copy e os prompts de fotografia (em inglês) para os slides escolhidos.
-3. **Apresentação:** Mostre ao usuário o planejamento:
-   - Slide X: [Layout] | [Copy] | [Prompt se Rota A]
-4. **BLOQUEIO:** Pergunte: "Posso gerar as IMAGENS e o planejamento de ativos?" (Não mencione HTML ainda).
-   - *Aguarde aprovação.*
+## 1. Contexto
+
+Leia:
+
+- `CLAUDE.md`
+- `AGENTS.md`
+- `marca/perfil.md`
+- `marca/sistema-visual.css`
+- `pesquisa/instagram-framework.md`
+- `config/.env` para decidir Rota A ou Rota B
+
+Se faltar marca, acione mentalmente o fluxo de `/começar` e configure antes.
 
 ---
 
-## FASE 3: Geração de Ativos (Apenas Rota A)
-1. Crie o arquivo `output/temp/carrossel-[tema]/prompts.json`.
-2. **EXECUÇÃO:** Rode no terminal:
-   `node scripts/gerar-imagens-carrossel.js output/temp/carrossel-[tema]/prompts.json output/carrossel-[tema]/images`
-3. **VERIFICAÇÃO DE DISCO (CRÍTICO):** Após o script, você DEVE rodar `ls output/carrossel-[tema]/images`.
-   - Se a pasta estiver vazia, você ERROU. Tente gerar novamente.
-   - Se as imagens estiverem lá, informe ao usuário: "Imagens geradas com sucesso. Vou começar o código agora."
+## 2. Planejamento
+
+Defina internamente:
+
+- tese central
+- publico e dor/desejo
+- hook
+- arco dos slides
+- pacing visual
+- CTA unica
+- quais slides usam imagem
+
+Mostre ao usuario um plano curto apenas quando houver decisao criativa relevante. Se o pedido for simples, pode executar direto.
 
 ---
 
-## FASE 4: Codificação HTML e Renderização
-1. Gere os arquivos HTML em `output/carrossel-[tema]/`.
-2. **REGRA DE OURO:** Use os layouts do AGENTS.md. Se o slide tem foto, use a foto. Se é respiro, use tipografia e geometria.
-3. Para cada HTML, rode a renderização:
-   `node scripts/renderizar.js output/carrossel-[tema]/slide-0X.html output/carrossel-[tema]/slide-0X.png`
+## 3. Rota Visual
+
+Se `FAL_KEY` tiver valor:
+
+- use Rota A
+- crie prompts em ingles
+- salve `output/temp/carrossel-[slug]/prompts.json`
+- rode `node scripts/gerar-imagens-carrossel.js output/temp/carrossel-[slug]/prompts.json output/carrossel-[slug]/images`
+- confirme que as imagens existem
+
+Se nao tiver:
+
+- use Rota B
+- crie uma composicao tipografica forte com textura, grid/dots e acentos geometricos
 
 ---
 
-## FASE 5: Finalização
-1. Informe que os PNGs estão prontos.
-2. Ofereça o envio via Telegram se configurado.
+## 4. HTML e Render
+
+Crie um HTML por slide em `output/carrossel-[slug]/`.
+
+Regras:
+
+- 1080x1350
+- texto critico no centro 1080x1080
+- sem emojis
+- slide 1 e ultimo com `src="__FOTO_PERFIL__"` se existir foto
+- Rota A: imagem valorizada e overlay limpo
+- Rota B: tipografia massiva e respiro
+
+Renderize:
+
+```bash
+node scripts/renderizar.js output/carrossel-[slug]/slide-0X.html output/carrossel-[slug]/slide-0X.png
+```
+
+---
+
+## 5. QA
+
+Antes de finalizar, confirme:
+
+- PNGs gerados
+- quantidade de slides
+- pasta final
+- se pode enviar pelo Telegram quando configurado

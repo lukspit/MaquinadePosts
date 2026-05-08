@@ -10,6 +10,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const os = require('os');
 
 const [,, htmlPath, outputPath, wStr, hStr] = process.argv;
 
@@ -28,6 +29,8 @@ const HEIGHT = parseInt(hStr  || '400',  10);
 
 const outputDir = path.dirname(outputPath);
 fs.mkdirSync(outputDir, { recursive: true });
+const userDataDir = path.join(os.tmpdir(), 'postpilot-puppeteer-profile');
+const browserHome = path.join(os.tmpdir(), 'postpilot-browser-home');
 
 function carregarFotoPerfil() {
   const raiz = path.join(__dirname, '..');
@@ -62,7 +65,9 @@ async function renderizar() {
 
   const browser = await puppeteer.launch({
     headless: 'new',
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    userDataDir,
+    env: { ...process.env, HOME: browserHome, XDG_CONFIG_HOME: browserHome },
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-crash-reporter', '--disable-crashpad', '--disable-features=Crashpad'],
   });
 
   try {
