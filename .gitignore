@@ -1,9 +1,10 @@
 node_modules/
+lp-repo/
 config/.env
 output/*
 !output/.gitkeep
 
-# Arquivos de marca (gerados pelo /chef — conteúdo pessoal do usuário)
+# Arquivos de marca (gerados pelo /começar — conteúdo pessoal do usuário)
 marca/*.md
 marca/*.css
 marca/*.jpg
