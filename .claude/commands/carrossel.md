@@ -34,7 +34,7 @@ Antes de criar qualquer HTML ou imagem, defina a estratégia do carrossel.
 - **Ângulo próprio:** qual leitura torna este conteúdo específico, humano ou original.
 - **Arco:** como a ideia evolui do contexto para a aplicação.
 - **CTA:** uma ação final clara, sem dispersão.
-- **Ritmo visual:** quais slides são densos, quais sintetizam, quais respiram e quais usam imagem.
+- **Ritmo visual:** quais slides são densos, quais sintetizam e quais usam imagem.
 
 ### Planejamento de slides
 
@@ -60,8 +60,6 @@ Se estiver na Rota A, os prompts de imagem devem estar em inglês, com cena, suj
 
 Use o `pesquisa/instagram-framework.md` como metodologia editorial: carrossel denso, escaneável, útil, com ponto de vista e desenvolvimento real.
 Use `skills/humanizer/SKILL.md` como revisão de linguagem: aplique a lógica de humanização na copy dos slides antes de criar o HTML, mantendo apenas a versão final no carrossel.
-
-Na Rota A, imagem é recurso editorial, não obrigação em todos os slides. Em um carrossel de 7 a 9 slides, o padrão saudável é usar imagem em 3 a 5 slides e preservar alguns slides tipográficos/de síntese para ritmo e leitura. Use imagem em todos os slides apenas se o tema pedir uma narrativa visual contínua.
 
 **BLOQUEIO:** pergunte:
 
@@ -113,8 +111,6 @@ Quando estiver tudo certo, diga:
 ### Rota A
 
 - A imagem é a arte principal.
-- Use fotografias de forma seletiva, onde elas aumentam contexto, prova, atmosfera ou valor percebido.
-- Intercale imagem com slides tipográficos ou de síntese para o carrossel respirar.
 - Use Hero Fade, Split Lateral ou Split Horizontal.
 - Texto sobre foto sempre precisa de contraste real: overlay escuro, bloco sólido ou área limpa.
 - Não coloque glow, textura ou SVG por cima de fotografia.
