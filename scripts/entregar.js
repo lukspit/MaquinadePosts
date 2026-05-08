@@ -146,6 +146,10 @@ function enviarDocumento(token, chatId, imagePath) {
   });
 }
 
+function ehSlideFinal(nomeArquivo) {
+  return /^slide-\d{1,2}\.png$/i.test(nomeArquivo);
+}
+
 async function main() {
   const env = carregarEnv();
   const { TELEGRAM_TOKEN: token, TELEGRAM_CHAT_ID: chatId } = env;
@@ -186,12 +190,13 @@ async function main() {
 
   // Lista PNGs na pasta, ordenados por nome
   const slides = fs.readdirSync(carrosselPath)
-    .filter((f) => f.endsWith('.png'))
+    .filter(ehSlideFinal)
     .sort()
     .map((f) => path.join(carrosselPath, f));
 
   if (slides.length === 0) {
-    console.error(`Nenhum arquivo PNG encontrado em: ${carrosselPath}`);
+    console.error(`Nenhum slide final encontrado em: ${carrosselPath}`);
+    console.error('Os arquivos finais devem seguir o padrão slide-01.png, slide-02.png...');
     process.exit(1);
   }
 

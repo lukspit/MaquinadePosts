@@ -12,6 +12,7 @@ O objetivo não é apenas gerar slides. O objetivo é transformar uma ideia solt
 
 - **Objetivo:** parar o scroll, reter atenção e conduzir a uma ação clara.
 - **Inteligência:** use `pesquisa/instagram-framework.md` como base editorial de copy, retenção e estrutura.
+- **Humanização:** use `skills/humanizer/SKILL.md` como revisão de linguagem para remover vícios de IA e dar voz mais humana à copy.
 - **Marca:** use `marca/perfil.md` e `marca/sistema-visual.css` como fonte de identidade.
 - **Autoridade:** design limpo, premium e direto. Zero emojis.
 - **Assinatura:** se houver `marca/foto.*`, ela deve aparecer no slide 1 e no último slide.
@@ -61,6 +62,20 @@ Cada slide deve ter:
 
 O carrossel atual funciona como um ensaio visual escaneável. Ele pode ser direto, mas precisa ter pensamento.
 
+### Revisão de humanização
+
+Antes de transformar a copy em HTML, faça uma passada editorial usando a lógica de `skills/humanizer/SKILL.md`.
+
+A revisão deve trocar texto polido demais por linguagem mais humana:
+
+- frases com ritmos variados;
+- menos abstração e mais observação concreta;
+- menos tom de palestra e mais voz de alguém pensando;
+- menos palavras de autoridade artificial;
+- mais especificidade, bastidor e nuance quando couber.
+
+Use a skill como filtro interno. No carrossel final, entregue apenas a versão revisada.
+
 ---
 
 ## 4. Direção de Arte
@@ -77,8 +92,9 @@ Sua missão visual é simetria, contraste e hierarquia.
 
 - **Headline do slide 1:** 110-140px, peso 800 quando o layout permitir.
 - **Títulos do meio:** 80-100px, peso 700.
-- **Eyebrows/labels:** 28-34px, uppercase ou semibold.
-- **Corpo:** grande o suficiente para leitura mobile.
+- **Eyebrows/labels:** 34-42px, uppercase ou semibold.
+- **Corpo:** 32-40px quando houver desenvolvimento textual.
+- **Rodapé visual:** linhas, assinatura e elementos de base devem respirar acima da borda inferior; use margem confortável em vez de colar no fundo.
 
 ---
 
@@ -99,6 +115,17 @@ A imagem é a alma do slide. Ela deve aumentar valor percebido, não decorar.
 
 Regra: varie a composição ao longo do carrossel. Não use glow, textura ou SVG por cima de fotografia.
 
+Prompt de imagem bom parece direção de fotografia:
+
+- pessoa, objeto ou cena específica;
+- contexto realista do nicho;
+- ação acontecendo;
+- luz e clima;
+- câmera, lente ou ângulo;
+- imperfeições reais: mesa usada, tela com reflexo, papel amassado, ambiente vivido.
+
+O objetivo é parecer uma foto editorial feita para aquela ideia, não uma ilustração genérica de IA.
+
 ### Rota B: Experiência Tipográfica
 
 Use quando `FAL_KEY` estiver vazio ou quando o conteúdo pedir respiro.
@@ -115,12 +142,14 @@ Use quando `FAL_KEY` estiver vazio ou quando o conteúdo pedir respiro.
 
 1. Leia `config/.env`, `marca/perfil.md`, `marca/sistema-visual.css`, `pesquisa/instagram-framework.md` e `AGENTS.md`.
 2. Defina tese, tensão real, promessa, ângulo próprio, arco, CTA e pacing.
-3. Mostre o plano editorial do carrossel ao usuário antes de gerar imagens e HTML.
-4. Se estiver na Rota A, gere `prompts.json` e rode `scripts/gerar-imagens-carrossel.js`.
-5. Verifique no disco se as imagens foram geradas.
-6. Gere os HTMLs em `output/carrossel-[slug]/`.
-7. Renderize com `scripts/renderizar.js`.
-8. Verifique se os PNGs existem, estão legíveis e seguem 1080x1350.
+3. Escreva a copy em versão editorial densa.
+4. Revise a copy com a lógica do `skills/humanizer/SKILL.md`.
+5. Mostre o plano editorial do carrossel ao usuário antes de gerar imagens e HTML.
+6. Se estiver na Rota A, gere `prompts.json` e rode `scripts/gerar-imagens-carrossel.js`.
+7. Verifique no disco se as imagens foram geradas.
+8. Gere os HTMLs em `output/carrossel-[slug]/`.
+9. Renderize com `scripts/renderizar.js`.
+10. Verifique se os PNGs existem, estão legíveis e seguem 1080x1350.
 
 ---
 

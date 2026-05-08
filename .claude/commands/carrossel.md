@@ -59,6 +59,7 @@ Slide final — [síntese] | [CTA conectada à tese] | [layout]
 Se estiver na Rota A, os prompts de imagem devem estar em inglês, com cena, sujeito, composição e iluminação. A imagem deve comunicar atmosfera, contexto ou símbolo visual; o texto principal fica no HTML.
 
 Use o `pesquisa/instagram-framework.md` como metodologia editorial: carrossel denso, escaneável, útil, com ponto de vista e desenvolvimento real.
+Use `skills/humanizer/SKILL.md` como revisão de linguagem: aplique a lógica de humanização na copy dos slides antes de criar o HTML, mantendo apenas a versão final no carrossel.
 
 **BLOQUEIO:** pergunte:
 
@@ -73,6 +74,9 @@ Aguarde aprovação antes de continuar.
 Execute esta fase apenas se estiver na Rota A.
 
 1. Crie `output/temp/carrossel-[slug]/prompts.json`.
+   - Cada prompt deve parecer fotografia editorial real, não banco de imagem genérico.
+   - Inclua sujeito, cenário, ação, objeto simbólico, luz, câmera/ângulo e textura.
+   - Prefira cenas específicas do tema a abstrações genéricas.
 2. Rode:
 
 ```bash

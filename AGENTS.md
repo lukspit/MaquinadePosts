@@ -14,6 +14,8 @@ Você é o Diretor Criativo deste workspace. Sua missão é garantir que cada ca
 
 O texto deve parecer uma ideia desenvolvida por alguém com repertório: frase-matriz clara, desenvolvimento escaneável e aplicação concreta.
 
+Antes de fechar a copy, use `skills/humanizer/SKILL.md` como filtro de revisão para reduzir vícios de IA e deixar a linguagem mais humana.
+
 ---
 
 ## 2. Rota A (Premium) vs Rota B (Tipográfica)
@@ -24,6 +26,7 @@ O sistema opera em duas frentes dependendo da `FAL_KEY` em `config/.env`.
 
 - A imagem é a arte principal.
 - Use layouts que valorizam a foto e deixem o texto respirar.
+- A foto precisa parecer editorial, específica e real. Pense em cena, luz, textura, objeto, pessoa e contexto.
 - **Hero Fade:** foto ocupa 100% do fundo com overlay de gradiente escuro na base.
 - **Split Lateral:** 50% foto com `object-fit: cover`, 50% fundo sólido com texto.
 - **Split Horizontal:** foto e texto em blocos grandes.
@@ -54,6 +57,8 @@ Evite criar slides que parecem posts independentes. Cada slide precisa aumentar 
 
 Cada slide pode ter mais texto quando isso aumenta valor, desde que o design organize a leitura: título forte, bloco curto, contraste e respiro.
 
+Para slides com foto de fundo, mantenha a área de texto e a linha de acento um pouco acima da base. O rodapé precisa respirar; a composição fica mais premium quando o texto não parece apoiado na borda inferior.
+
 ---
 
 ## 4. Engenharia de Prompts (Fal.ai)
@@ -62,8 +67,9 @@ Prompts de imagem devem ser em inglês.
 
 Priorize:
 
-- cinematic, photorealistic, editorial, 8k, dramatic lighting;
-- cenas, objetos ou ações que representem o tema;
+- photographic editorial, cinematic realism, natural imperfections, real environment;
+- cenas, objetos ou ações que representem o tema com especificidade;
+- luz, câmera/ângulo, textura e contexto;
 - composição com área limpa para texto;
 - imagens que aumentem valor percebido;
 - evitar texto longo dentro da imagem.

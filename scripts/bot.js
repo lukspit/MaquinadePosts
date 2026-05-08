@@ -161,13 +161,17 @@ function rodarClaude(prompt) {
 // Detecção de slides gerados
 // ---------------------------------------------------------------------------
 
+function ehSlideFinal(nomeArquivo) {
+  return /^slide-\d{1,2}\.png$/i.test(nomeArquivo);
+}
+
 // Usa timestamp em vez de comparar nomes de pasta — robusto a reinicializações do bot
 function detectarNovosSlides(inicioMs) {
   const outputDir = path.join(ROOT, 'output');
   if (!fs.existsSync(outputDir)) return [];
 
   const entradas = fs.readdirSync(outputDir)
-    .filter((d) => d !== 'temp' && !d.startsWith('.'))
+    .filter((d) => d !== 'temp' && !d.startsWith('.') && !d.startsWith('teste-') && d !== 'banner-checkout')
     .map((nome) => {
       const p = path.join(outputDir, nome);
       try {
@@ -182,7 +186,7 @@ function detectarNovosSlides(inicioMs) {
 
   for (const { p } of entradas) {
     const pngs = fs.readdirSync(p)
-      .filter((f) => f.endsWith('.png'))
+      .filter(ehSlideFinal)
       .sort()
       .map((f) => path.join(p, f));
 
