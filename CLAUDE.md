@@ -90,11 +90,11 @@ Sua missão visual é simetria, contraste e hierarquia.
 
 ### Tipografia e escala
 
-- **Headline do slide 1:** 110-140px, peso 800 quando o layout permitir.
-- **Títulos do meio:** 80-100px, peso 700.
-- **Eyebrows/labels:** 34-42px, uppercase ou semibold.
-- **Corpo:** 32-40px quando houver desenvolvimento textual.
-- **Rodapé visual:** linhas, assinatura e elementos de base devem respirar acima da borda inferior; use margem confortável em vez de colar no fundo.
+- **Headline do slide 1:** 104-132px, peso 800 quando o layout permitir.
+- **Títulos do meio:** 75-94px, peso 700.
+- **Eyebrows/labels:** 32-40px, uppercase ou semibold.
+- **Corpo:** 30-38px quando houver desenvolvimento textual.
+- **Rodapé visual:** linhas, assinatura e elementos de base devem respirar acima da borda inferior; use margem confortável sem afastar demais a composição.
 
 ---
 
@@ -113,7 +113,7 @@ A imagem é a alma do slide. Ela deve aumentar valor percebido, não decorar.
 - **Split Horizontal:** foto e texto em blocos grandes.
 - **Detalhe Editorial:** close, objeto ou cena simbólica com área limpa para texto.
 
-Regra: varie a composição ao longo do carrossel. Não use glow, textura ou SVG por cima de fotografia.
+Regra: varie a composição ao longo do carrossel. Rota A não exige foto em todos os slides: o padrão saudável é alternar fotografia com slides tipográficos ou de síntese. Não use glow, textura ou SVG por cima de fotografia.
 
 Prompt de imagem bom parece direção de fotografia:
 

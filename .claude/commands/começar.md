@@ -249,20 +249,20 @@ Gere `marca/sistema-visual.css` com este formato:
 
   /* Tipografia */
   --fonte-principal: '[FonteName]', system-ui, sans-serif;
-  --tamanho-hook: 62px;        /* Texto principal do slide de abertura */
-  --tamanho-titulo: 48px;      /* Títulos nos slides do meio */
-  --tamanho-corpo: 34px;       /* Texto de desenvolvimento */
-  --tamanho-eyebrow: 38px;     /* Labels e pequenas chamadas */
-  --tamanho-cta: 38px;         /* CTA final */
+  --tamanho-hook: 58px;        /* Texto principal do slide de abertura */
+  --tamanho-titulo: 45px;      /* Títulos nos slides do meio */
+  --tamanho-corpo: 32px;       /* Texto de desenvolvimento */
+  --tamanho-eyebrow: 36px;     /* Labels e pequenas chamadas */
+  --tamanho-cta: 36px;         /* CTA final */
   --peso-leve: 400;
   --peso-normal: 600;
   --peso-forte: 700;
   --altura-linha: 1.3;
 
   /* Espaçamento */
-  --padding-slide: 92px;
-  --gap-elementos: 36px;
-  --margem-rodape: 150px;
+  --padding-slide: 88px;
+  --gap-elementos: 34px;
+  --margem-rodape: 132px;
 
   /* Forma */
   --borda-arredondada: 12px;   /* Elementos internos, se houver */

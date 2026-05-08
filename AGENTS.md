@@ -27,6 +27,8 @@ O sistema opera em duas frentes dependendo da `FAL_KEY` em `config/.env`.
 - A imagem é a arte principal.
 - Use layouts que valorizam a foto e deixem o texto respirar.
 - A foto precisa parecer editorial, específica e real. Pense em cena, luz, textura, objeto, pessoa e contexto.
+- Use fotos de forma seletiva. Em geral, 3 a 5 slides com imagem em um carrossel de 7 a 9 slides já criam valor sem cansar.
+- Preserve slides tipográficos ou de síntese para ritmo e contraste.
 - **Hero Fade:** foto ocupa 100% do fundo com overlay de gradiente escuro na base.
 - **Split Lateral:** 50% foto com `object-fit: cover`, 50% fundo sólido com texto.
 - **Split Horizontal:** foto e texto em blocos grandes.
@@ -57,7 +59,7 @@ Evite criar slides que parecem posts independentes. Cada slide precisa aumentar 
 
 Cada slide pode ter mais texto quando isso aumenta valor, desde que o design organize a leitura: título forte, bloco curto, contraste e respiro.
 
-Para slides com foto de fundo, mantenha a área de texto e a linha de acento um pouco acima da base. O rodapé precisa respirar; a composição fica mais premium quando o texto não parece apoiado na borda inferior.
+Para slides com foto de fundo, mantenha a área de texto e a linha de acento um pouco acima da base. O rodapé precisa respirar, mas sem afastar demais a composição do chão visual.
 
 ---
 
