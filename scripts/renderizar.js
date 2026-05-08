@@ -10,6 +10,10 @@
  * Foto de perfil:
  *   Se o HTML contiver o placeholder __FOTO_PERFIL__, o script injeta automaticamente
  *   a imagem de marca/foto.jpg (ou .png / .jpeg) como base64 antes de renderizar.
+ *
+ * Imagens locais:
+ *   Qualquer imagem local referenciada em <img src="..."> ou CSS url(...) também é
+ *   convertida para base64 em memória. O HTML fonte não é alterado.
  */
 
 const fs = require('fs');
@@ -70,6 +74,116 @@ function injetarFoto(html) {
   return html.replaceAll('__FOTO_PERFIL__', '');
 }
 
+function mimePorExtensao(arquivo) {
+  const ext = path.extname(arquivo).toLowerCase();
+  const mimes = {
+    '.png': 'image/png',
+    '.jpg': 'image/jpeg',
+    '.jpeg': 'image/jpeg',
+    '.webp': 'image/webp',
+    '.gif': 'image/gif',
+    '.svg': 'image/svg+xml',
+  };
+  return mimes[ext] || 'application/octet-stream';
+}
+
+function ehImagemSuportada(arquivo) {
+  return ['.png', '.jpg', '.jpeg', '.webp', '.gif', '.svg'].includes(path.extname(arquivo).toLowerCase());
+}
+
+function deveIgnorarUrl(valor) {
+  if (!valor) return true;
+  const url = valor.trim();
+  return (
+    url === '' ||
+    url.startsWith('#') ||
+    url.startsWith('data:') ||
+    url.startsWith('blob:') ||
+    url.startsWith('http://') ||
+    url.startsWith('https://') ||
+    url.startsWith('//')
+  );
+}
+
+function limparUrlLocal(valor) {
+  const semAspas = valor.trim().replace(/^['"]|['"]$/g, '');
+  const semQuery = semAspas.split('#')[0].split('?')[0];
+  if (semQuery.startsWith('file://')) {
+    try {
+      return new URL(semQuery).pathname;
+    } catch {
+      return semQuery.replace(/^file:\/\//, '');
+    }
+  }
+  try {
+    return decodeURIComponent(semQuery);
+  } catch {
+    return semQuery;
+  }
+}
+
+function resolverImagemLocal(valor, htmlAbsPath) {
+  if (deveIgnorarUrl(valor)) return null;
+
+  const local = limparUrlLocal(valor);
+  if (!local) return null;
+
+  const raiz = path.resolve(__dirname, '..');
+  const htmlDir = path.dirname(htmlAbsPath);
+  const candidatos = [];
+
+  if (path.isAbsolute(local)) {
+    candidatos.push(local);
+    candidatos.push(path.resolve(raiz, `.${local}`));
+  } else {
+    candidatos.push(
+      path.resolve(htmlDir, local),
+      path.resolve(raiz, local),
+      path.resolve(process.cwd(), local)
+    );
+  }
+
+  return candidatos.find((candidato) => {
+    return fs.existsSync(candidato) && fs.statSync(candidato).isFile() && ehImagemSuportada(candidato);
+  }) || null;
+}
+
+function imagemParaDataUrl(arquivo) {
+  const mime = mimePorExtensao(arquivo);
+  const base64 = fs.readFileSync(arquivo).toString('base64');
+  return `data:${mime};base64,${base64}`;
+}
+
+function injetarImagensLocais(html, htmlAbsPath) {
+  const cache = new Map();
+
+  function converter(valor) {
+    if (deveIgnorarUrl(valor)) return valor;
+
+    const arquivo = resolverImagemLocal(valor, htmlAbsPath);
+    if (!arquivo) return valor;
+
+    if (!cache.has(arquivo)) {
+      cache.set(arquivo, imagemParaDataUrl(arquivo));
+    }
+
+    return cache.get(arquivo);
+  }
+
+  let resultado = html.replace(/\bsrc=(["'])([^"']+)\1/gi, (match, aspas, valor) => {
+    const convertido = converter(valor);
+    return `src=${aspas}${convertido}${aspas}`;
+  });
+
+  resultado = resultado.replace(/url\(\s*(["']?)([^"')]+)\1\s*\)/gi, (match, aspas, valor) => {
+    const convertido = converter(valor);
+    const quote = aspas || '"';
+    return `url(${quote}${convertido}${quote})`;
+  });
+
+  return resultado;
+}
+
 async function renderizar() {
   let puppeteer;
 
@@ -98,11 +212,12 @@ async function renderizar() {
       deviceScaleFactor: 1,
     });
 
-    // Lê o HTML e injeta a foto de perfil somente em memória.
+    // Lê o HTML e injeta imagens somente em memória.
     const htmlBruto = fs.readFileSync(htmlPath, 'utf-8');
-    const html = injetarFoto(htmlBruto);
+    const htmlAbsPath = path.resolve(htmlPath);
+    const html = injetarImagensLocais(injetarFoto(htmlBruto), htmlAbsPath);
 
-    const baseUrl = pathToFileURL(path.dirname(path.resolve(htmlPath)) + path.sep).href;
+    const baseUrl = pathToFileURL(path.dirname(htmlAbsPath) + path.sep).href;
     const htmlComBase = html.replace(/<head([^>]*)>/i, `<head$1><base href="${baseUrl}">`);
     await page.setContent(htmlComBase, { waitUntil: 'networkidle0' });
 

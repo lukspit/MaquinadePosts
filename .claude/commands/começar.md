@@ -99,39 +99,42 @@ Diga ao usuário:
 
 **Execute as seguintes pesquisas web** (use a ferramenta de busca disponível):
 
-1. "Instagram carousel best practices 2024 2025 high engagement"
-2. "carrossel instagram o que funciona parar scroll engajamento"
-3. "instagram carousel hook slide examples viral"
-4. "instagram 1080x1350 typography design layout best practices"
-5. "instagram carousel structure storytelling content creators"
+1. "Instagram carousel strategy 2026 original content saves shares"
+2. "Instagram original content photos carousels recommendations 2026"
+3. "Adam Mosseri Instagram shares sends saves original content 2025 2026"
+4. "instagram carousel editorial content dense educational posts 2026"
+5. "instagram carousel storytelling visual thread creators 2026"
 
 **Depois de fazer as pesquisas, sintetize os achados e escreva `pesquisa/instagram-framework.md` com exatamente estas seções:**
 
 ```markdown
-# Framework de Carrosséis do Instagram
+# Framework Editorial de Carrosséis do Instagram
 Data da pesquisa: [data atual]
-Fonte: pesquisa web + análise de padrões reais
+Fonte: pesquisa web + análise de padrões atuais
 
-## 1. Padrões de alto engajamento
-[O que as pesquisas indicam que funciona: quantidade ideal de slides, ritmo, tipos de conteúdo que performam]
+## 1. Premissa atual
+[Explique o carrossel como ensaio visual escaneável: útil, específico, original e com ponto de vista.]
 
-## 2. Slide 1 — Hooks que param o scroll
-[Formatos específicos que funcionam: estruturas de frase, padrões visuais, o que evitar]
+## 2. Sinais que importam
+[Saves, shares/DMs, tempo de leitura, originalidade, utilidade e conteúdo que alguém mandaria para outra pessoa.]
 
-## 3. Estrutura dos slides do meio
-[Como manter o usuário passando: técnicas de cliff-hanger, revelação progressiva, densidade de informação]
+## 3. Estrutura editorial
+[Slide 1 abre tensão; slide 2 dá contexto; meio desenvolve mecanismo, exemplo, nuance e aplicação; final sintetiza.]
 
-## 4. Slide final — CTAs que convertem
-[O que as CTAs eficazes têm em comum, formatos, posicionamento]
+## 4. Densidade escaneável
+[Como escrever slides com frase-matriz, desenvolvimento curto, exemplos concretos e leitura mobile.]
 
-## 5. Princípios visuais observados
-[Tipografia, espaço em branco, contraste, proporção texto/visual, o que aparece nos perfis de alto engajamento]
+## 5. Voz e autenticidade
+[Como fazer a copy parecer humana, específica e baseada em observação real.]
 
-## 6. O que evitar
-[Padrões que aparecem em carrosséis de baixo desempenho]
+## 6. Modelos de construção
+[Diagnóstico, ponto de vista, guia prático, bastidor/caso e como cada modelo organiza a narrativa.]
 
-## 7. Variações por nicho
-[Como esses princípios se adaptam para nichos diferentes: educação, negócios, lifestyle, saúde, etc.]
+## 7. Critério de qualidade
+[Perguntas para avaliar tese, especificidade, desenvolvimento, exemplos, utilidade e potencial de compartilhamento.]
+
+## 8. Direção visual para copy densa
+[Como design, hierarquia, respiro e contraste organizam conteúdo mais profundo.]
 ```
 
 **Se a pesquisa web não estiver disponível:**

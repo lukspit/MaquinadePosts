@@ -218,6 +218,7 @@ REGRAS DE DESIGN OBRIGATÓRIAS:
 - Use exatamente as cores, fontes e identidade definidas em marca/perfil.md e marca/sistema-visual.css
 - Slide: 1080x1350px
 - Foto de perfil: use src="__FOTO_PERFIL__" no atributo src — nunca um caminho de arquivo local
+- Imagens geradas: use caminhos locais normais no HTML/CSS; o renderizador embute essas imagens automaticamente
 - Zero emojis em qualquer slide
 ${perfil ? `\nPERFIL DA MARCA:\n${perfil}` : ''}
 

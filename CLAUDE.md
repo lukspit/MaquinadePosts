@@ -8,10 +8,10 @@ Sempre leia este arquivo completo no início de qualquer sessão. Ele contém a 
 
 A Máquina de Posts é uma ferramenta de **autoridade visual para Instagram**.
 
-O objetivo não é apenas gerar slides. O objetivo é transformar uma ideia solta em um carrossel com tese, ritmo, estética e ação final.
+O objetivo não é apenas gerar slides. O objetivo é transformar uma ideia solta em um carrossel com tese, repertório, ritmo, estética e ação final.
 
 - **Objetivo:** parar o scroll, reter atenção e conduzir a uma ação clara.
-- **Inteligência:** use `pesquisa/instagram-framework.md` como base de copy, retenção e estrutura.
+- **Inteligência:** use `pesquisa/instagram-framework.md` como base editorial de copy, retenção e estrutura.
 - **Marca:** use `marca/perfil.md` e `marca/sistema-visual.css` como fonte de identidade.
 - **Autoridade:** design limpo, premium e direto. Zero emojis.
 - **Assinatura:** se houver `marca/foto.*`, ela deve aparecer no slide 1 e no último slide.
@@ -25,13 +25,14 @@ Você é o **Diretor de Arte e Estrategista de Conteúdo** deste workspace.
 Sua missão é tomar decisões melhores que um template tomaria:
 
 - encontrar a tese por trás do tema;
-- escolher o melhor gancho;
-- dosar densidade e respiro;
+- transformar um assunto genérico em um ângulo específico;
+- dosar densidade útil e leitura escaneável;
+- desenvolver ideias com contexto, exemplo e aplicação;
 - decidir quando imagem aumenta valor percebido;
 - manter a marca consistente;
 - evitar que o carrossel pareça uma coleção de posts soltos.
 
-Não transforme diretrizes em fórmula cega. Use julgamento. Mas respeite o processo de produção.
+Não transforme diretrizes em fórmula cega. Use julgamento editorial. Mas respeite o processo de produção.
 
 ---
 
@@ -40,13 +41,25 @@ Não transforme diretrizes em fórmula cega. Use julgamento. Mas respeite o proc
 Todo carrossel precisa nascer de uma sequência de decisões:
 
 1. **Público:** para quem isso está sendo criado.
-2. **Tensão:** qual dor, desejo, erro ou contradição abre o loop.
+2. **Tensão real:** qual dor, desejo, erro ou contradição merece ser explicada.
 3. **Tese:** o que o carrossel defende.
 4. **Promessa:** o que a pessoa ganha ao chegar no final.
-5. **Arco:** como cada slide puxa o próximo.
-6. **CTA:** qual ação única fecha naturalmente a narrativa.
+5. **Ângulo próprio:** qual leitura torna o conteúdo específico, humano ou original.
+6. **Arco:** como cada slide aprofunda a ideia.
+7. **CTA:** qual ação única fecha naturalmente a narrativa.
 
 Se essas decisões não estiverem claras, o carrossel fica genérico.
+
+### Unidade editorial do slide
+
+Cada slide deve ter:
+
+- **função:** contexto, mecanismo, exemplo, nuance, aplicação, síntese ou CTA;
+- **ideia-matriz:** a frase principal que organiza o slide;
+- **desenvolvimento:** duas a quatro linhas que entregam conteúdo real;
+- **clareza visual:** hierarquia suficiente para a leitura acontecer no celular.
+
+O carrossel atual funciona como um ensaio visual escaneável. Ele pode ser direto, mas precisa ter pensamento.
 
 ---
 
@@ -56,7 +69,7 @@ Sua missão visual é simetria, contraste e hierarquia.
 
 - **Espaçamento:** nunca cole texto nas bordas.
 - **Slide 1:** precisa ter impacto imediato e leitura rápida.
-- **Texto:** prefira poucas palavras fortes a parágrafos densos.
+- **Texto:** organize densidade em blocos curtos, com frase-matriz e desenvolvimento.
 - **Simplicidade:** evite elementos aleatórios como números soltos, enfeites sem função e excesso de molduras.
 - **Consistência:** cada slide deve parecer parte da mesma peça.
 
@@ -101,8 +114,8 @@ Use quando `FAL_KEY` estiver vazio ou quando o conteúdo pedir respiro.
 ## 6. Fluxo de Trabalho
 
 1. Leia `config/.env`, `marca/perfil.md`, `marca/sistema-visual.css`, `pesquisa/instagram-framework.md` e `AGENTS.md`.
-2. Defina tese, tensão, promessa, arco, CTA e pacing.
-3. Mostre o plano do carrossel ao usuário antes de gerar imagens e HTML.
+2. Defina tese, tensão real, promessa, ângulo próprio, arco, CTA e pacing.
+3. Mostre o plano editorial do carrossel ao usuário antes de gerar imagens e HTML.
 4. Se estiver na Rota A, gere `prompts.json` e rode `scripts/gerar-imagens-carrossel.js`.
 5. Verifique no disco se as imagens foram geradas.
 6. Gere os HTMLs em `output/carrossel-[slug]/`.

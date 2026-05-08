@@ -21,38 +21,44 @@ Você segue uma sequência lógica de dependências. Não avance para uma fase s
 
 ---
 
-## FASE 2: Estratégia, Copy e Aprovação
+## FASE 2: Estratégia Editorial, Copy e Aprovação
 
 Antes de criar qualquer HTML ou imagem, defina a estratégia do carrossel.
 
 ### Decisões obrigatórias
 
 - **Tese central:** o que este carrossel defende.
-- **Tensão:** qual dor, erro, desejo ou contradição faz a pessoa continuar deslizando.
+- **Tensão real:** qual dor, erro, desejo ou contradição merece ser explicado.
 - **Promessa:** o que a pessoa entende ou ganha ao chegar no fim.
 - **Público:** para quem o carrossel está falando.
-- **Arco:** como cada slide puxa o próximo.
+- **Ângulo próprio:** qual leitura torna este conteúdo específico, humano ou original.
+- **Arco:** como a ideia evolui do contexto para a aplicação.
 - **CTA:** uma ação final clara, sem dispersão.
-- **Ritmo visual:** quais slides têm impacto, quais têm respiro e quais têm imagem.
+- **Ritmo visual:** quais slides são densos, quais sintetizam e quais usam imagem.
 
 ### Planejamento de slides
 
 Monte um plano com 6 a 9 slides, salvo se o tema claramente pedir outro tamanho.
+
+Cada slide precisa ter uma função editorial. Planeje a ideia que será desenvolvida, não só a frase que aparecerá em destaque.
 
 Mostre ao usuário o planejamento neste formato:
 
 ```text
 Tese:
 Promessa:
+Ângulo próprio:
 Rota visual:
 
-Slide 1 — [layout] | [copy] | [imagem/prompt se Rota A]
-Slide 2 — [layout] | [copy] | [imagem/prompt se Rota A]
+Slide 1 — [função editorial] | [ideia-matriz] | [desenvolvimento em 2-4 linhas] | [layout] | [imagem/prompt se Rota A]
+Slide 2 — [função editorial] | [ideia-matriz] | [desenvolvimento em 2-4 linhas] | [layout] | [imagem/prompt se Rota A]
 ...
-Slide final — [layout] | [CTA]
+Slide final — [síntese] | [CTA conectada à tese] | [layout]
 ```
 
-Se estiver na Rota A, os prompts de imagem devem estar em inglês, com cena, sujeito, composição e iluminação. Não peça texto longo dentro da imagem.
+Se estiver na Rota A, os prompts de imagem devem estar em inglês, com cena, sujeito, composição e iluminação. A imagem deve comunicar atmosfera, contexto ou símbolo visual; o texto principal fica no HTML.
+
+Use o `pesquisa/instagram-framework.md` como metodologia editorial: carrossel denso, escaneável, útil, com ponto de vista e desenvolvimento real.
 
 **BLOQUEIO:** pergunte:
 
@@ -95,6 +101,8 @@ Quando estiver tudo certo, diga:
 4. Nunca use emojis.
 5. Se `marca/foto.*` existir, use `src="__FOTO_PERFIL__"` no slide 1 e no último.
 6. Use os layouts e regras de `AGENTS.md`.
+7. A copy deve seguir o planejamento aprovado: frase-matriz em destaque, desenvolvimento escaneável e exemplos quando fizer sentido.
+8. Para imagens geradas localmente, use caminhos de arquivo normais no HTML/CSS. O `scripts/renderizar.js` embute essas imagens em base64 durante a renderização.
 
 ### Rota A
 
@@ -125,8 +133,9 @@ Antes de finalizar, verifique:
 2. Todos os slides esperados foram renderizados.
 3. O slide 1 tem impacto imediato.
 4. O texto está legível em mobile.
-5. A sequência tem ritmo: impacto, desenvolvimento, respiro e CTA.
-6. A identidade da marca foi respeitada.
+5. A sequência tem ritmo: abertura, contexto, desenvolvimento, síntese e CTA.
+6. Os slides do meio entregam conteúdo real, com exemplos, contexto ou aplicação.
+7. A identidade da marca foi respeitada.
 
 Finalize informando:
 

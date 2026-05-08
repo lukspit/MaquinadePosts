@@ -1,195 +1,260 @@
-# Framework de Carrosséis do Instagram
-Data da pesquisa: Abril 2026
-Fonte: pesquisa web — Hootsuite, TrueFuture Media, CreatorFlow, PostEverywhere, PostNitro, SkedSocial, Napolify, MarketingAgent, UseVisuals, HauteStock e outros
+# Framework Editorial de Carrosséis do Instagram
+Data da pesquisa: Maio 2026
+Fonte: pesquisa web + leitura de padrões atuais de criadores, conteúdo educativo e mudanças recentes de distribuição
 
 ---
 
-## 1. Padrões de alto engajamento
+## 1. Premissa Atual
 
-**Carrossel é o formato de maior engajamento do Instagram em 2025-2026:**
-- Taxa de engajamento média: 10% (contra 7% de imagem única e 6% de Reels)
-- Conversão 114% maior que posts de imagem única
-- Carrosséis educativos têm taxa de save 34% maior que Reels educativos
+O carrossel que funciona em 2026 se parece menos com uma sequência de placas virais e mais com um **ensaio visual escaneável**.
 
-**O algoritmo favorece o carrossel de formas únicas:**
-- Se alguém não deslizou, o Instagram automaticamente avança para o slide 2 na segunda exibição do post — o carrossel tem duas chances de enganchar a pessoa
-- Isso significa que o **slide 2 precisa ser tratado como um segundo hook independente**, não só como continuação do slide 1
+A pessoa não desliza apenas porque existe um truque de curiosidade. Ela desliza quando percebe que existe pensamento ali: uma visão útil, específica, original e bem desenvolvida.
 
-**Quantidade ideal de slides:**
-- Sweet spot atual: 7-10 slides
-- Instagram expandiu para 20 slides em rollout global (fim de 2024 / 2025) — oportunidade para conteúdo educativo profundo
-- Menos de 5 slides: subutiliza o formato
-- Mais de 10: usar só quando o conteúdo justifica (guias, tutoriais passo a passo)
+O formato precisa equilibrar três forças:
 
-**Oportunidade sub-explorada:**
-- Carrosséis mistos (imagem + vídeo no mesmo carrossel): 2,33% de engajamento
-- Apenas 7% dos carrosséis usam esse formato hoje — lacuna enorme para quem explorar primeiro
+- **Ponto de vista:** existe uma opinião clara por trás do conteúdo.
+- **Densidade útil:** cada slide entrega uma camada real, não apenas uma frase bonita.
+- **Leitura rápida:** o conteúdo é denso, mas organizado para ser entendido no celular.
+
+O objetivo não é fazer o usuário "cair" no carrossel. O objetivo é fazer ele pensar: "isso explica algo que eu estava sentindo, mas ainda não tinha organizado desse jeito".
 
 ---
 
-## 2. Slide 1 — hooks que param o scroll
+## 2. Sinais Que Importam
 
-**A regra de 0.7 segundos:**
-O usuário médio está rolando a 3-4 posts por segundo. Se o slide 1 exigir mais de 0.7 segundos para ser absorvido, a pessoa já foi. O hook precisa ser instantâneo.
+Os sinais fortes do Instagram continuam girando em torno de permanência, salvamento, compartilhamento e originalidade.
 
-**Regra prática: máximo 12 palavras.**
-Além disso, o texto não é lido — é escaneado. Uma palavra em destaque vale mais que uma frase completa.
+Em 2026, a pergunta estratégica para um carrossel é:
 
-**Formatos de hook que funcionam (do mais alto para menor engajamento):**
+> Alguém mandaria isso para outra pessoa porque é útil, verdadeiro ou específico?
 
-1. **Gap de curiosidade com número:** "O erro que 87% dos [nicho] cometem sem perceber"
-2. **Afirmação contraintuitiva:** "[Crença comum] está errado. Aqui está o porquê."
-3. **Promessa de transformação específica:** "Como passei de X para Y em Z semanas"
-4. **Dor nomeada com precisão:** "Se você [situação específica], você está perdendo [consequência concreta]"
-5. **Lista com número:** "7 [coisas que o público quer] que ninguém fala"
+Um carrossel com potencial de distribuição costuma ter:
 
-**O que mata o hook:**
-- "Você sabia que..." — sinal imediato de conteúdo genérico
-- Pergunta retórica sem tensão ("Quer melhorar sua vida?")
-- Texto descritivo sem promessa ou conflito
-- Design sem hierarquia — quando tudo é igual, nada chama atenção
-- Se o hook poderia ser de qualquer carrossel de qualquer nicho, é fraco demais
+- uma ideia que a audiência reconhece na própria vida;
+- uma explicação que organiza um problema real;
+- exemplos concretos, não conselhos soltos;
+- linguagem com voz humana, não texto de manual;
+- transformação real do tema, não reciclagem de formatos prontos.
 
-**Slide 2 como segundo hook:**
-Como o Instagram exibe o slide 2 automaticamente para quem não deslizou, ele precisa ser forte o suficiente para engajar por si só. Não pode ser só "continuação" — precisa ter um micro-hook próprio.
+Originalidade aqui não significa inventar algo inédito no mundo. Significa aplicar perspectiva própria: recorte, exemplo, analogia, diagnóstico, bastidor, experiência, leitura de contexto.
 
 ---
 
-## 3. Estrutura dos slides do meio
+## 3. Estrutura Editorial
 
-**Princípio central: cada slide precisa ganhar o próximo.**
-A pessoa não desliza por inércia. Ela desliza porque quer. O trabalho dos slides do meio é criar esse querer repetidamente.
+Pense no carrossel como uma mini-argumentação.
 
-**Técnicas que funcionam:**
+### Slide 1 — Abertura editorial
 
-- **Revelação progressiva:** a informação mais importante não aparece de uma vez — é distribuída ao longo dos slides, com cada um revelando uma camada
-- **Cliff-hanger:** terminar o slide com tensão não resolvida ("E o que aconteceu depois vai te surpreender" não como frase, mas como estrutura — o slide termina antes da resolução)
-- **Lista que não termina:** "7 erros — o pior é o número 5" faz a pessoa percorrer até lá
-- **Prova + princípio:** alterna entre dado/caso concreto e a conclusão que ele gera — mantém credibilidade e ritmo
+O primeiro slide precisa abrir uma tensão clara, mas sem parecer manchete apelativa.
 
-**Densidade de informação:**
-- Um conceito central por slide — nunca dois
-- Máximo 3 linhas de texto por slide
-- Se precisar de mais texto, a ideia não está clara o suficiente — corte, sintetize
+Ele pode fazer isso de quatro formas:
 
-**Micro-CTAs no meio (aumenta deslizes):**
-Apenas 5% dos carrosséis incluem um prompt para deslizar, mas ele aumenta o engajamento significativamente. Pode ser sutil: uma seta, "continua →", ou o visual do slide que sugere que há mais.
+- nomear um problema que a pessoa sente;
+- contrariar uma crença comum com maturidade;
+- apresentar uma observação específica;
+- prometer uma explicação útil.
 
-**Consistência visual:**
-Todos os slides do meio precisam parecer da mesma família. Mesma paleta, mesma tipografia, mesmo ritmo visual. Slides que parecem posts separados quebram o fio narrativo e reduzem o engajamento.
+O slide 1 não precisa entregar todo o conteúdo, mas precisa mostrar que existe uma visão por trás.
 
----
+### Slide 2 — Contexto ou tese
 
-## 4. Slide final — CTAs que convertem
+O slide 2 funciona como segunda porta de entrada, mas não deve virar outro gancho solto.
 
-**A estrutura dupla de CTA:**
-- Soft CTA no meio do carrossel (micro-prompts: "salva esse slide", "manda para um amigo que precisa")
-- Hard CTA no slide final — única, direta, específica
+Ele deve ampliar a abertura:
 
-**CTAs que performam bem (do mais engajante):**
+- explicar por que aquilo importa;
+- mostrar o erro de leitura comum;
+- dar contexto para a tese;
+- preparar o terreno para o desenvolvimento.
 
-1. **Save para depois:** "Salva esse post para consultar quando precisar" — gera salvamento, que é forte sinal para o algoritmo
-2. **DM com palavra-chave:** "Manda DM com a palavra [X] e te envio [recurso gratuito]" — gera mensagem direta, altíssimo valor de alcance
-3. **Comentário com resposta:** "Comenta SIM e te mando o checklist completo" — gera comentário
-4. **Compartilhamento direcionado:** "Manda isso para alguém que está passando por [situação]" — viralização orgânica
-5. **Follow com promessa:** "Me segue para mais conteúdo sobre [nicho específico]" — só funciona se for específico
+### Slides do meio — Desenvolvimento
 
-**O que não funciona:**
-- "Curta e compartilhe" — genérico, sem benefício para o usuário
-- Múltiplas CTAs no mesmo slide — divide a atenção e nenhuma converte
-- CTA sem verbo de ação forte — "Link na bio" sem contexto não gera clique
-- CTA desconectada do conteúdo — a ação pedida precisa ser a conclusão natural do que foi mostrado
+Os slides do meio são o produto.
 
-**Formato visual do slide final:**
-- Mais espaço em branco que os slides do meio — respira
-- Texto da CTA em destaque máximo
-- Logo ou identificação da marca (o usuário pode ver esse slide fora do contexto do perfil)
+Eles precisam desenvolver a ideia em camadas:
 
----
+1. contexto;
+2. mecanismo;
+3. exemplo;
+4. nuance;
+5. aplicação;
+6. consequência.
 
-## 5. Princípios visuais observados
+Nem todo carrossel precisa usar todas essas camadas, mas todo carrossel precisa avançar o pensamento. Um bom slide do meio não é apenas "mais uma frase"; ele adiciona algo que muda a compreensão do tema.
 
-**Dimensões:**
-- Formato de maior performance: 1080x1350px (4:5 portrait)
-- Importante: o grid do perfil exibe apenas o quadrado central 1080x1080 (corta 270px do topo e da base)
-- Isso significa: texto e elementos críticos precisam ficar nos 1080x1080 centrais para aparecer no perfil
-- Manter a mesma orientação em todos os slides — misturar portrait com square gera transições travadas
+### Penúltimo slide — Síntese
 
-**Tipografia:**
-- Fontes grandes e de alto contraste — o Instagram é visto em celular, muitas vezes em movimento
-- Hierarquia clara: uma fonte maior (título/hook) e uma menor (corpo) — nunca três tamanhos competindo
-- Fontes sem serifa (sans-serif) tendem a performar melhor em texto de baixa quantidade
-- Fontes com serifa funcionam bem para posicionamentos mais premium/editorial
+Antes da CTA, consolide a virada.
 
-**Cor e contraste:**
-- Alto contraste é obrigatório — o Instagram é visto em brilho médio em ambiente externo
-- Nunca texto sobre imagem sem overlay de cor sólida ou gradiente
-- Consistência de paleta entre todos os slides — o set precisa parecer um conjunto
+Esse slide deve responder:
 
-**Espaço em branco:**
-- Slides saturados de texto ou elementos visuais reduzem engajamento
-- Espaço em branco não é vazio — é ritmo visual. Facilita absorção e cria percepção de qualidade
-- Slides com menos elementos são mais fáceis de escanear em 0.7 segundos
+- qual foi o aprendizado principal?
+- o que a pessoa passa a enxergar diferente?
+- qual é a decisão prática que nasce disso?
 
-**Proporção texto/visual:**
-- Slides que são 100% texto performam bem em conteúdo educativo e de opinião
-- Slides com elemento visual (dado em destaque, ilustração, foto) performam bem em lifestyle e negócios
-- Misturar os dois no mesmo set funciona desde que haja coerência visual
+### Último slide — Ação natural
+
+A CTA deve nascer da tese.
+
+Se o carrossel foi educativo, salvar faz sentido.
+Se foi diagnóstico, comentar ou mandar DM pode fazer sentido.
+Se foi relacional, compartilhar com alguém pode fazer sentido.
+Se foi comercial, a chamada precisa ser específica e conectada à transformação apresentada.
 
 ---
 
-## 6. O que evitar
+## 4. Densidade Escaneável
 
-**No copy:**
-- Hook genérico sem especificidade ("Você sabia que..." / perguntas retóricas sem tensão)
-- Texto que poderia ser de qualquer carrossel de qualquer perfil
-- Mais de um conceito por slide
-- Valor concentrado apenas no final — menos de 20% das pessoas chegam ao slide 8+
-- CTA múltipla ou vaga no slide final
+Densidade não é encher o slide de texto. Densidade é entregar conteúdo com organização.
 
-**No design:**
-- Texto pequeno demais para mobile (menos de 28px equivalente)
-- Slides que parecem posts separados (sem fio visual de identidade)
-- Misturar orientações no mesmo carrossel (portrait + square = transição travada)
-- Texto ou elementos críticos fora do centro 1080x1080 (será cortado no grid do perfil)
-- Slides saturados de informação
+Um slide forte pode ter:
 
-**Na estratégia:**
-- Conteúdo copiado de outro lugar sem transformação própria — o algoritmo penaliza e a audiência percebe
-- Salvar todo o valor para o último slide — a maioria não chega lá
-- Sem nenhuma indicação para deslizar — apenas 5% dos carrosséis incluem, mas impacta muito
+- uma frase-matriz em destaque;
+- duas a quatro linhas de desenvolvimento;
+- um exemplo curto;
+- uma consequência prática;
+- uma comparação que torna a ideia concreta.
+
+Exemplo de baixa densidade:
+
+> Você não precisa de mais disciplina.
+
+Exemplo com densidade escaneável:
+
+> Disciplina não resolve um ambiente que premia distração.
+>
+> Antes de tentar "ter mais foco", reduza as decisões pequenas que roubam energia todo dia: notificações, abas abertas, tarefas misturadas e horários sem fronteira.
+
+O segundo exemplo é mais longo, mas é mais útil. Ele dá linguagem, causa e aplicação.
 
 ---
 
-## 7. Variações por nicho
+## 5. Voz e Autenticidade
 
-**Educação / Conhecimento:**
-- Formato mais forte: "X jeitos de fazer Y", "O erro mais comum em Z", passo a passo
-- Slide 1: fato surpreendente, dado concreto, ou contradição com crença comum
-- Slides do meio: um conceito por slide, linguagem direta, hierarquia clara
-- CTA preferida: "Salva esse post" (conteúdo que as pessoas querem rever)
-- Save rate 34% maior que Reels para esse nicho
-- Funciona bem com carrosséis mais longos (8-10 slides)
+Carrosséis atuais performam melhor quando parecem escritos por alguém que observou algo real.
 
-**Negócios / Empreendedorismo:**
-- Formato mais forte: histórias de transformação, antes/depois, resultados com números
-- Slide 1: resultado específico ("Faturei R$X em Y dias fazendo isso")
-- Slides do meio: o processo, os erros, as lições — com prova concreta
-- CTA preferida: "DM com [palavra]" ou "Comenta [X]" — gera conversa que converte
-- Tom mais direto e orientado a resultado
+A voz deve soar como:
 
-**Lifestyle / Saúde / Bem-estar:**
-- Formato mais forte: inspiração com utilidade, "rotina de X", transformações visuais
-- Slide 1: imagem ou promessa visual forte antes do texto
-- CTA mais suave e natural — não parecer venda
-- Horário de maior performance: domingo, 17-19h
-- Mistura de imagem + texto funciona especialmente bem
+- uma pessoa explicando uma ideia com clareza;
+- um especialista organizando o caos para o leitor;
+- um criador trazendo uma leitura própria;
+- uma conversa low-fi, mas bem pensada.
 
-**Desenvolvimento pessoal:**
-- Formato mais forte: reflexão + ação prática
-- Slides do meio: combinação de citação/princípio + aplicação concreta
-- CTA: "Manda para alguém que precisa ouvir isso" — viralização alta por identificação
-- Tom: equilibra inspiração com ação específica
+Isso aproxima o carrossel da tendência de vídeos simples e pessoais: menos acabamento artificial na copy, mais presença, contexto e verdade.
 
-**Geral — 2025-2026:**
-O carrossel é o "visual thread" do Instagram. Pensa como um fio de argumento ou narrativa, não como slides isolados. Quem domina a progressão narrativa — onde cada slide avança o argumento e cria curiosidade pelo próximo — domina o formato.
+O texto pode ser simples, mas não raso. Pode ser direto, mas não genérico. Pode ter ritmo, mas não precisa parecer uma sequência de slogans.
+
+---
+
+## 6. Modelos de Construção
+
+Use modelos como raciocínio, não como fórmula visual.
+
+### Diagnóstico
+
+Bom para temas em que a audiência sente um problema, mas ainda não entende a causa.
+
+Estrutura:
+
+1. sintoma;
+2. leitura errada;
+3. causa real;
+4. exemplo cotidiano;
+5. consequência;
+6. ajuste prático;
+7. síntese;
+8. CTA.
+
+### Ponto de vista
+
+Bom para autoridade, posicionamento e diferenciação.
+
+Estrutura:
+
+1. afirmação com perspectiva;
+2. por que a visão comum falha;
+3. o que muda quando você olha diferente;
+4. exemplo;
+5. nuance;
+6. aplicação;
+7. síntese;
+8. CTA.
+
+### Guia prático
+
+Bom para salvamento.
+
+Estrutura:
+
+1. promessa útil;
+2. quando usar;
+3. passo 1 com contexto;
+4. passo 2 com exemplo;
+5. passo 3 com detalhe importante;
+6. erro comum;
+7. checklist mental;
+8. CTA para salvar.
+
+### Bastidor ou caso
+
+Bom para originalidade e conexão.
+
+Estrutura:
+
+1. situação real;
+2. conflito;
+3. decisão;
+4. processo;
+5. erro ou descoberta;
+6. resultado;
+7. princípio extraído;
+8. CTA.
+
+---
+
+## 7. Critério de Qualidade
+
+Antes de aprovar a copy, faça estas perguntas:
+
+1. Este carrossel tem uma tese clara?
+2. Existe uma leitura própria ou só conselho genérico?
+3. Os slides do meio desenvolvem uma ideia ou apenas empilham frases?
+4. Há exemplos, contexto ou aplicação concreta?
+5. A pessoa conseguiria salvar isso para usar depois?
+6. Alguém mandaria isso por DM para uma pessoa específica?
+7. O texto parece humano o suficiente para carregar confiança?
+
+Se a resposta for fraca, volte para a tese, não para o enfeite.
+
+---
+
+## 8. Direção Visual Para Copy Densa
+
+Carrossel denso precisa de design que organize leitura.
+
+Use:
+
+- hierarquia forte entre frase-matriz e desenvolvimento;
+- blocos curtos de texto;
+- respiro real ao redor das ideias;
+- marcações visuais para separar exemplo, contexto e aplicação;
+- contraste alto para leitura mobile;
+- ritmo entre slides mais densos e slides de síntese.
+
+O design não deve fingir que o conteúdo é simples. Ele deve tornar o conteúdo claro.
+
+---
+
+## 9. Resumo Operacional
+
+O carrossel ideal da Máquina de Posts é:
+
+- editorial, não publicitário;
+- denso, mas escaneável;
+- útil, não apenas chamativo;
+- específico, não reciclado;
+- humano, não engessado;
+- visualmente premium, mas a serviço da ideia.
+
+O objetivo final é criar posts que pareçam ter sido pensados por alguém com repertório, não montados por um gerador de frases.
